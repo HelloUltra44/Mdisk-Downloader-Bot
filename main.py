@@ -40,7 +40,7 @@ from split import ss, temp_channel, isPremmium
 if isPremmium: acc = Client("myacc", api_id=api_id, api_hash=api_hash, session_string=ss)
 
 # optionals
-auth = os.environ.get("AUTH", "623741973,1864861524,5076949930,683684279,5316294458,5290630238,598394386,5410723702,1335978271,1198027788,5515158923,809970451,1303200779,240296058,635819536,1726415542,5135693898,414315974,963634341,683889832,910898801,5565512653,5580289036,817785442,5020113494,748720772,1278611015,5285296040,5307413215,1335978271,1382643117,5092328246,1053140055,923184534,1024155122,5207149801,947623302,5099967725,1312881543,1667559069,891836729,1057959919,721234444,1838349598,2083663200,540828579,5255735308,5072829406,672148918,1088084047,1222974251,5568598812,5753750662,617534770,5452354891,910348411")
+auth = os.environ.get("AUTH", "623741973,1864861524,5076949930,683684279,5316294458,5290630238,598394386,5410723702,1335978271,1198027788,5515158923,809970451,1303200779,240296058,635819536,5135693898,817785442,5020113494,748720772,1278611015,5285296040,5307413215,1335978271,1382643117,5092328246,1053140055,923184534,1024155122,5207149801,947623302,5099967725,1312881543,1667559069,891836729,1057959919,721234444,1838349598,2083663200,540828579,5255735308,5072829406,672148918,1088084047,1222974251,5568598812,5753750662,617534770,5452354891,910348411")
 ban = os.environ.get("BAN", "")
 from mdisk import iswin
 
@@ -112,37 +112,6 @@ async def sts(c, m):
     ids = getid()
     tot = len(ids)
     await m.reply_text(text=f"Total user(s) {tot}", quote=True)
-
-#addpremium user
-
-@app.on_message(filters.private & filters.user(ADMIN) & filters.command(["addpremium"]))
-async def buypremium(bot, message):
-	await message.reply_text("Select Plan.........",quote=True,reply_markup=InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("VIP 1",callback_data = "vip1"), 
-        			InlineKeyboardButton("VIP 2",callback_data = "vip2") ]]))
-        			
-
-@app.on_callback_query(filters.regex('vip1'))
-async def vip1(bot,update):
-	id = update.message.reply_to_message.text.split("/addpremium")
-	user_id = id[1].replace(" ", "")
-	inlimit  = 21474836480
-	uploadlimit(int(user_id),21474836480)
-	usertype(int(user_id),"VIP1")
-	addpre(int(user_id))
-	await update.message.edit("Added successfully To Premium Upload limit 20 GB")
-	await bot.send_message(user_id,"Hey Ur Upgraded To VIP 1 check your plan here /myplan")
-
-@app.on_callback_query(filters.regex('vip2'))
-async def vip2(bot,update):
-	id = update.message.reply_to_message.text.split("/addpremium")
-	user_id = id[1].replace(" ", "")
-	inlimit  = 107374182400
-	uploadlimit(int(user_id),107374182400)
-	usertype(int(user_id),"VIP2")
-	addpre(int(user_id))
-	await update.message.edit("Added successfully To Premium Upload limit 100 GB")
-	await bot.send_message(user_id,"Hey Ur Upgraded To VIP 2 check your plan here /myplan")
 
 	
 #broadcast
