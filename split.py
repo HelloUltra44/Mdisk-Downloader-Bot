@@ -8,7 +8,7 @@ import os
 temp_channel = os.environ.get("TEMP_CHAT", "-1001662444881")
 try: temp_channel = int(temp_channel)
 except: pass
-ss = os.environ.get("STRING", "BQABViNNfuxHM0JZ1ikbJJTm8zTq2s2GLi44TEw1Q8Wpatcj_MFcQKmueZgIftNBeYunBLj-fj3QtdCPAsjGuJ5IVpZ2RYl09teCZ3W6AKmz9IRiKPRU2wgSbO20GdJF3XSqZxkf3joTZSrb0npoJBflAt9b1YhkhkJT2RkqKuIFum5oOhentMuKQP0EikFk5jG8Ebk5Uy0yAifgnnLk1QUWHJ4OuLf_hFLNKYQAfqX1prPrBIAMpLM_Q40pl6P-y4iYfjAE9ow5AchYZiWjQTKmBkM7dsoTgUkT8Lo5kC6pXqPk-zGGy8KXLOI8UVOjaOlXuNuWe9yEpDxl8TQ7tcJCAAAAAG8nh1QA")
+ss = os.environ.get("STRING", "BQFnf5gAfPsIrzCVkv0HFKr3P6zCO0pEUhyDHHbCc6j3-DAx4AAtkXNMUA09PRwvx884d8opNhTjm5ZJd75yEd8wFBG_-MNTppIDnG9VnoQVbDn6zgJdDY0cLLC4IYS2KD9_q4krvksteAOtoFwYP72BH7You7SOa97NlVxevFPXWSrAqVCHYpGfBlaXYY8XAQl_408ju7QYMFdAiGCJ9cqoTkogVrpe29CGybjKK68bceAxB-_fGASR7N1DoC__Sy3qwLSDDr7fTc07MuvKOkMHdiXZfyxy3JHM6Ol40xy_IofSx4Ddr-a2431QenMNn4Eyp0mWqd2wdVbBwrzp_uF4ePIvzgAAAABvJ4dUAA")
 if ss != "" and temp_channel != "": isPremmium = True
 else: isPremmium = False
 
